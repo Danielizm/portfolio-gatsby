@@ -1,7 +1,7 @@
 //import { Link } from "gatsby"
 import React,{useEffect, useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import {StaticImage} from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 // @ts-ignore
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -12,7 +12,7 @@ interface Props{
 const Header = ({atHome}:Props) => {
   const [isSticky,setIsSticky] = useState(false)
   const handleScroll = () => {
-    setIsSticky(window.pageYOffset > 50)
+    setIsSticky(window.scrollY > 50)
   }
   const heightUnit = ()=>{
     let vh = window.innerHeight * 0.01
@@ -34,19 +34,20 @@ const Header = ({atHome}:Props) => {
     <div>
       <div className="inner-header">
         <div className="logo">
-           <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/">
+           <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/">
            <StaticImage 
               src="../images/logo.png"
               alt="Logo Image"
-              placeholder="blurred" />
+              placeholder="blurred"
+               />
            </AniLink>
         </div>
         <div className={atHome?"navigation":"navigation white"}>
           <nav>
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/">Home</AniLink>
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/about">About</AniLink>
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work">Work</AniLink>
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/contact">Contact</AniLink>
+          <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/">Home</AniLink>
+          <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/about">About</AniLink>
+          <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work">Work</AniLink>
+          <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/contact">Contact</AniLink>
           </nav>
         </div>
       </div>

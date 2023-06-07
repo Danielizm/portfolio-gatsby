@@ -2,8 +2,8 @@ import React from "react"
 import "../styles/style.scss"
 import Layout from "../components/layout"
 import Banner from "../components/homeBanner"
-/*import AboutBlurb from "../components/aboutBlurb"
-import PortfolioBlurb from "../components/portfolioBlurb"*/
+import AboutBlurb from "../components/aboutBlurb"
+/*import PortfolioBlurb from "../components/portfolioBlurb"*/
 import ContactBar from "../components/contactBar"
 import SEO from "../components/seo"
 //import {gsap,Power2} from 'gsap'
@@ -14,8 +14,8 @@ const IndexPage = () => {
   <Layout isHome={true}>
     <SEO title="Home"/>
     <Banner />
-    {/*<AboutBlurb />
-    <PortfolioBlurb />*/}
+    <AboutBlurb />
+    {/*<PortfolioBlurb />*/}
     <ContactBar />
   </Layout>
   )

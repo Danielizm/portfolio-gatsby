@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import {FiLinkedin} from "react-icons/fi"
-import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import {gsap,Power2} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger"
@@ -59,7 +58,7 @@ const banner = () => {
           <div className="face">
             <StaticImage
               src="../images/face-3.png"
-              alt="Footer Image"
+              alt="Hero Image"
               placeholder="blurred"
               className="hero-img"
             />

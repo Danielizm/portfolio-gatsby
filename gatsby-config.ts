@@ -20,7 +20,11 @@ const config: GatsbyConfig = {
       "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
       "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
+  }, "gatsby-plugin-image", 
+    "gatsby-plugin-sharp", 
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-transition-link", 
+    "gatsby-plugin-sass", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"
@@ -32,7 +36,7 @@ const config: GatsbyConfig = {
       "path": `${__dirname}/src/images`
     },
     __key: "images"
-  }, `gatsby-plugin-sass`,
+  }, "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
