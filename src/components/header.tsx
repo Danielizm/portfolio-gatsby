@@ -10,19 +10,6 @@ interface Props{
 }
 
 const Header = ({atHome}:Props) => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
- 
   const [isSticky,setIsSticky] = useState(false)
   const handleScroll = () => {
     setIsSticky(window.pageYOffset > 50)
