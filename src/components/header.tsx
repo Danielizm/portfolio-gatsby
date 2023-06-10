@@ -1,7 +1,8 @@
 //import { Link } from "gatsby"
 import React,{useEffect, useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+//import BackgroundImage from "gatsby-background-image"
 // @ts-ignore
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -10,6 +11,17 @@ interface Props{
 }
 
 const Header = ({atHome}:Props) => {
+  const data = useStaticQuery(graphql`
+    query {
+        site_logo:file(relativePath:{eq:"logo.png"}){
+            childImageSharp{
+                gatsbyImageData(
+                placeholder: BLURRED
+              )
+            }
+        }
+    }
+    `)
   const [isSticky,setIsSticky] = useState(false)
   const handleScroll = () => {
     setIsSticky(window.scrollY > 50)
@@ -35,10 +47,9 @@ const Header = ({atHome}:Props) => {
       <div className="inner-header">
         <div className="logo">
            <AniLink disableAnimation= {false} paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/">
-           <StaticImage 
-              src="../images/logo.png"
+           <GatsbyImage 
+              image={getImage(data.site_logo)}
               alt="Logo Image"
-              placeholder="blurred"
                />
            </AniLink>
         </div>

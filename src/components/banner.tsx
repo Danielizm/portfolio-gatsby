@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-//import BackgroundImage from "gatsby-background-image-es5"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import BackgroundImage from "gatsby-background-image"
+//import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 interface Bpros {
   header?: String
@@ -23,20 +23,21 @@ const banner = (props: Bpros) => {
 
   useEffect(() => {
     setIsLoaded(true)
-    window.addEventListener("scroll", handleOnScroll)   
-    //console.dir(banner_image);
+    window.addEventListener("scroll", handleOnScroll)
     return () => {
       setIsLoaded(false)
       window.removeEventListener("scroll", handleOnScroll)
     }
   }, [isLoaded,isScroll])
-  const banner_image = getImage(props.img);
+
   return (
-    <div className="banner" data-loaded={isLoaded ? "loaded" : ""}>
-        <GatsbyImage image={banner_image} alt={props.alt} className="banner-image" />
-        <h1>{props.header}</h1>
-        <div className="overlay"></div>
-    </div>
+    <BackgroundImage
+      className="banner"
+      data-loaded={isLoaded ? "loaded" : ""}
+      fluid={props.img} >
+      <h1>{props.header}</h1>
+      <div className="overlay"></div>
+    </BackgroundImage>
   )
 }
 
