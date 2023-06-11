@@ -17,9 +17,10 @@ const about = () => {
     query {
       banner: file(relativePath: { eq: "banner-3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1700) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: FULL_WIDTH
+          )
         }
       }
     }
@@ -27,7 +28,7 @@ const about = () => {
     return (
         <Layout isHome={false}>
             <SEO title="About"/>
-            <Banner header="About Me" img={data.banner.childImageSharp.fluid} alt="About Me"/>
+            <Banner header="About Me" img={data.banner} alt="About Me"/>
             <AboutMe />
             <Education />
             <Skills />
