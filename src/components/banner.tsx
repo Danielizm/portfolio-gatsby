@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-//import BackgroundImage from "gatsby-background-image"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 interface Bpros {
@@ -32,13 +31,6 @@ const banner = (props: Bpros) => {
 
   return (
     <div className="banner" data-loaded={isLoaded ? "loaded" : ""}>
-      {/*<BackgroundImage
-      className="banner"
-      data-loaded={isLoaded ? "loaded" : ""}
-      fluid={props.img} >
-      <h1>{props.header}</h1>
-      <div className="overlay"></div>
-    </BackgroundImage>*/}
       <GatsbyImage image={getImage(props.img)} alt={props.alt} className="banner-image"/>
       <h1>{props.header}</h1>
       <div className="overlay"></div>
