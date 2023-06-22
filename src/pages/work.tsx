@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
-//import Grid from "../components/grid"
+import Grid from "../components/grid"
 import ContactBar from "../components/contactBar"
 import SEO from '../components/seo'
 
@@ -15,6 +15,23 @@ const works = () => {
             placeholder: BLURRED
             layout: FULL_WIDTH
           )
+        }
+      }
+      allContentfulProjects(sort: { fields: [id], order: ASC }) {
+        edges {
+          node {
+            id
+            title
+            blurb
+            description
+            featured_image {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                )
+              }
+            }
+          }
         }
       }
     }
@@ -53,7 +70,7 @@ const works = () => {
           </div>
         </div>
       </div>
-      {/*<Grid projects={data.allStrapiProjects.edges} />*/}
+      <Grid projects={data.allStrapiProjects.edges} />
       <ContactBar />
     </Layout>
   )

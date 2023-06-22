@@ -2,7 +2,7 @@ import React from 'react'
 import {useStaticQuery,graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Banner from '../components/banner'
-//import Form from '../components/form'
+import Form from '../components/form'
 import SEO from '../components/seo'
 
 const contact = () => {
@@ -27,7 +27,7 @@ const contact = () => {
             <div className="container form-section">
             <h2>Send me a message</h2>
             <h3>Or email me on <a href="mailto:jiacheng_su@hotmail.com">jiacheng_su@hotmail.com</a></h3>
-            {/*<Form />*/}
+            <Form />
             </div>
         </Layout>
     )

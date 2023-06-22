@@ -72,7 +72,7 @@ const banner = () => {
           </div>
         </div>
       </div>
-      <div className="fixed-misc">Web Developer</div>
+      <div className="fixed-misc">Web Development</div>
     </div>
   )
 }

@@ -133,7 +133,7 @@ const Formik = withFormik<MyFormProps, FormValues, FormikHelpers<FormValues>>({
     message: Yup.string().required("Message is required"),
   }),
   handleSubmit(values: FormValues, actions: FormikHelpers<FormValues>) {
-    console.log(values.email, values.name, values.message)
+    //console.log(values.email, values.name, values.message)
     actions.setSubmitting(true)
     setTimeout(() => {
       /*emailjs.send(
