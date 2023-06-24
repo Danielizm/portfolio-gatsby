@@ -17,19 +17,18 @@ const works = () => {
           )
         }
       }
-      allContentfulProjects(sort: { fields: [id], order: ASC }) {
+      allContentfulProjects(sort: { fields: id, order: ASC }) {
         edges {
           node {
             id
             title
             blurb
-            description
+            detail{raw}
+            description{raw}
             featured_image {
-              childImageSharp {
                 gatsbyImageData(
                   placeholder: BLURRED
                 )
-              }
             }
           }
         }
@@ -70,7 +69,7 @@ const works = () => {
           </div>
         </div>
       </div>
-      <Grid projects={data.allStrapiProjects.edges} />
+      <Grid projects={data.allContentfulProjects.edges} />
       <ContactBar />
     </Layout>
   )
