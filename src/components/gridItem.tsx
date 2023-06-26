@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 interface gridItemProps {
   project: any
+  key: string
 }
 
 const gridItem = (props: gridItemProps) => {
@@ -28,8 +29,8 @@ const gridItem = (props: gridItemProps) => {
         </div>
         <div className="s1"></div>
         <div className="s2"></div>
-        {/*<div className="s3"></div>*/}
-        <p>{props.project.blurb}</p>
+        <div className="s3"></div>
+        <p>{props.project.blurb.blurb}</p>
       </div>
       <h2 className="card">{props.project.title}</h2>
     </AniLink>

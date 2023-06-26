@@ -22,13 +22,11 @@ const works = () => {
           node {
             id
             title
-            blurb
+            blurb{blurb}
             detail{raw}
             description{raw}
-            featured_image {
-                gatsbyImageData(
-                  placeholder: BLURRED
-                )
+            featured_image{
+              gatsbyImageData(placeholder:BLURRED)
             }
           }
         }
