@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import parse from 'html-react-parser';
 import Layout from "../components/layout"
 import Banner from "../components/banner"
@@ -11,7 +11,7 @@ import SEO from '../components/seo'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const project = ({ data, pageContext }: any) => {
-  const project = data.strapiProjects
+  const project = data.contentfulProjects
   const { next, previous } = pageContext
   let next_url = null
   let previous_url =null
@@ -65,7 +65,7 @@ const project = ({ data, pageContext }: any) => {
                 r="4.7"
               ></circle>
             </svg>
-            <Img fluid={project.show_image.childImageSharp.fluid} />
+            <GatsbyImage image={getImage(project.show_image)} />
           </div>
           <div className="texts">
             <div className="description">
@@ -84,13 +84,13 @@ const project = ({ data, pageContext }: any) => {
         </div>
       </div>
       <div className="full-width">
-        <Img fluid={project.full_width_image.childImageSharp.fluid} />
+        <GatsbyImage image={getImage(project.full_width_image)} />
       </div>
       <div className="mobile-images">
         <div className="container">
           {project.mobile_images.map((image: any, index: number) => (
             <div className="mobile-image card" key={index} id={"mi-" + index} data-sal="slide-up" data-sal-duration="1000" data-sal-delay={index*300}>
-              <Img fluid={image.localFile.childImageSharp.fluid} />
+              <GatsbyImage image={getImage(image.localFile)} />
             </div>
           ))}
         </div>
@@ -124,7 +124,7 @@ const project = ({ data, pageContext }: any) => {
 
 export default project
 
-export const data = graphql`
+/*export const data = graphql`
   query ProjectTemplate($id: String!) {
     contentfulProjects(id: { eq: $id }) {
       id
@@ -165,4 +165,4 @@ export const data = graphql`
       }
     }
   }
-`
+`*/
