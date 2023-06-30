@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
-import parse from 'html-react-parser';
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 import ContactBar from "../components/contactBar"
@@ -18,12 +19,30 @@ const project = ({ data, pageContext }: any) => {
   next && (next_url  = next.title.replace(/\s/g, '').toLowerCase())
   previous &&  (previous_url = previous.title.replace(/\s/g, '').toLowerCase())
 
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+      [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
+      [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
+      [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+      [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+      [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    },
+    renderMark: {
+      [MARKS.BOLD]: text => <strong>{text}</strong>,
+      [MARKS.ITALIC]: text => <em>{text}</em>,
+      [MARKS.UNDERLINE]: text => <u>{text}</u>,
+    },
+  }
+
   return (
     <Layout class_name="project" isHome={false}>
       <SEO title="Related Project"/>
       <Banner
         header={project.title}
-        fluid={project.full_width_image.childImageSharp.fluid}
+        img={project.fullwidth_image}
+        alt="hero image"
       />
       <div className="back-to-work container">
       <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work">
@@ -70,11 +89,11 @@ const project = ({ data, pageContext }: any) => {
           <div className="texts">
             <div className="description">
               <h3>Description</h3>
-              {parse(project.description)}
+              {renderRichText(project.description, options)}
             </div>
             <div className="details">
               <h3>Details</h3>
-              {parse(project.details)}
+              {renderRichText(project.detail, options)}
             </div>
             <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to={project.link} target="_blank">
               <span>See The Site</span>
@@ -124,45 +143,39 @@ const project = ({ data, pageContext }: any) => {
 
 export default project
 
-/*export const data = graphql`
+export const data = graphql`
   query ProjectTemplate($id: String!) {
     contentfulProjects(id: { eq: $id }) {
       id
       title
       blurb
       link
-      description
-      details
+      description{raw}
+      details{raw}
       featured_image {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
+        gatsbyImageData(placeholder:BLURRED)
       }
       show_image {
-        childImageSharp {
-          fluid(maxWidth: 900, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+        gatsbyImageData(
+          width: 900
+          placeholder:BLURRED
+          quality: 100
+        )
       }
-      full_width_image {
-        childImageSharp {
-          fluid(maxWidth: 1800, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      fullwidth_image {
+        gatsbyImageData(
+          width: 1800
+          placeholder:BLURRED
+          quality: 100
+        )
       }
       mobile_images {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        gatsbyImageData(
+          width: 200
+          placeholder:BLURRED
+          quality: 100
+        )
       }
     }
   }
-`*/
+`
