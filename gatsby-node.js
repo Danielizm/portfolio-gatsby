@@ -22,7 +22,7 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
 
   // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
-/*exports.createPages = ({ actions, graphql }) => {
+exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     
     const getProjects = makeRequest(graphql, `
@@ -62,4 +62,4 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
     
     // Query for articles nodes to use in creating pages.
     return getProjects;
-  };*/
+  };

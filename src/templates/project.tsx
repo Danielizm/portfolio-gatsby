@@ -103,13 +103,13 @@ const project = ({ data, pageContext }: any) => {
         </div>
       </div>
       <div className="full-width">
-        <GatsbyImage image={getImage(project.full_width_image)} />
+        <GatsbyImage image={getImage(project.fullwidth_image)} />
       </div>
       <div className="mobile-images">
         <div className="container">
           {project.mobile_images.map((image: any, index: number) => (
             <div className="mobile-image card" key={index} id={"mi-" + index} data-sal="slide-up" data-sal-duration="1000" data-sal-delay={index*300}>
-              <GatsbyImage image={getImage(image.localFile)} />
+              <GatsbyImage image={getImage(image)} />
             </div>
           ))}
         </div>
@@ -148,10 +148,10 @@ export const data = graphql`
     contentfulProjects(id: { eq: $id }) {
       id
       title
-      blurb
+      blurb{blurb}
       link
       description{raw}
-      details{raw}
+      detail{raw}
       featured_image {
         gatsbyImageData(placeholder:BLURRED)
       }
@@ -171,7 +171,7 @@ export const data = graphql`
       }
       mobile_images {
         gatsbyImageData(
-          width: 200
+          width: 350
           placeholder:BLURRED
           quality: 100
         )
