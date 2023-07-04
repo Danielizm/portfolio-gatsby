@@ -95,10 +95,10 @@ const project = ({ data, pageContext }: any) => {
               <h3>Details</h3>
               {renderRichText(project.detail, options)}
             </div>
-            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to={project.link} target="_blank">
+            {/*<AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to={project.link} target="_blank">
               <span>See The Site</span>
-              <BsArrowRight />
-            </AniLink>
+              <BsArrowRight /> 
+            </AniLink>*/}
           </div>
         </div>
       </div>

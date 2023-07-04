@@ -271,15 +271,15 @@
       .mobile-image {
         display: block;
         flex: 0 0 20%;
-        padding: 5rem 2rem 4rem;
-        border-radius: 4rem;
+        padding: 2.5rem 1rem 1rem;
+        border-radius: 1rem;
         background: linear-gradient(135deg, #f0f0f0, #fafafa);
         position: relative;
         width: 100%;
         &::before {
           content: "";
           position: absolute;
-          top: 3rem;
+          top: 1rem;
           left: 50%;
           transform: translateX(-50%);
           height: 0.5rem;
