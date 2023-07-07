@@ -8,7 +8,7 @@
 import React,{ReactNode} from "react"
 //import Header from "./header"
 //import MobileNav from "./mobileNav"
-//import Footer from "./footer" 
+import Footer from "./footer" 
 import ScrollUp from "./scrollUp"
 
 interface Props {
@@ -23,7 +23,7 @@ const Layout = ({ children,class_name,isHome=false } : Props) => {
       {/*<MobileNav atHome={isHome}/>
       <Header atHome={isHome}/>*/}
       <main className={class_name}>{children}</main>
-      {/*<Footer />*/}
+      <Footer />
       <ScrollUp />
     </>
   )

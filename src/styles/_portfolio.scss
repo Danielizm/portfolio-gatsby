@@ -1,0 +1,332 @@
+.work-intro{
+   padding: 5rem 3rem;
+   background:$greyLt;
+   position: relative;
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .intro-img{
+      flex:0 0 30%;
+      text-align: center;
+      #bottom{
+        position: absolute;
+        left:45%;
+        transform:translateX(-45%);
+      }
+    }
+    .intro-texts{
+      flex:0 0 40%;
+      p{
+        line-height: 1.4;
+        font-size:1.2rem;
+      }
+    }
+    @include md{
+      .intro-img,.intro-texts{
+        flex:0 0 100%;
+      }
+      .intro-texts{margin-top:2rem;}
+    }
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $greyLt;
+  }
+  @include sm {
+    padding: 3rem 1.8rem;
+  }
+}
+.work-wrap {
+  padding: 5rem 0 2rem;
+  .container {
+    .items {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        position: relative;
+        flex: 0 0 43%;
+        .item {
+          position: relative;
+          width: 100%;
+          /*height: calc(70vmin * 9 / 14);*/
+          height: 400px;
+          max-width: 640px;
+          margin: 2rem auto;
+          overflow: hidden;
+          box-shadow: 0 1.25em 1em -0.5em #0005;
+          .i {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            .img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              object-position: 0% 50%;
+              transition: transform 2s;
+            }
+          }
+          .s1,
+          .s2,
+          .s3 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            animation: gg 1.2s ease-out forwards;
+            pointer-events: none;
+          }
+          .s1 {
+            left: 100%;
+            z-index: 1;
+            width: var(--s1-w);
+            background-color: #fff;
+            mix-blend-mode: difference;
+
+            --x1: -110vmin;
+            --x2: -35vmin;
+          }
+          .s2 {
+            z-index: 2;
+            width: calc(var(--s2-w) * 2);
+            left: calc(100% + var(--s1-w));
+            background-color: #000;
+            --x1: -110vmin;
+            --x2: -75vmin;
+          }
+          .s3 {
+            z-index: 2;
+            width: 10vmin;
+            right: 100%;
+            background-color: #000;
+            animation-delay: 0.1s;
+            --x1: 0;
+            --x2: 0%;
+          }
+          p {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            z-index: 10;
+            padding: 1rem;
+            background: $white;
+            font-weight: 300;
+            max-width: 35%;
+            opacity: 0;
+            transition: all 0.4s ease-in-out 0.2s;
+            @include sm {
+              font-size: 3.2vw;
+              max-width: 50%;
+            }
+          }
+          &:hover {
+            .img {
+              transform: translateX(-5%);
+              transition-duration: 3s;
+            }
+            .s1,
+            .s2,
+            .s3 {
+              animation-name: move-x;
+            }
+            p {
+              opacity: 1;
+            }
+          }
+          @include lg{
+            height: 300px;
+          }
+          @include sm {
+            /*width:85vmin;
+            height:calc(85vmin * 9 / 14);*/
+            height: 250px;
+          }
+        }
+        @include md {
+          flex: 0 0 100%;
+        }
+        @include sm {
+          flex: 0 0 90%;
+        }
+      }
+      h2 {
+        position: absolute;
+        z-index: 10;
+        top: 20%;
+        right: -1%;
+        display: inline-block;
+        background: $purpleLt;
+        transform: skew(-8deg) rotate(-6deg) translate(0, -50%);
+        padding: 0.4rem 0.6rem;
+        margin: 0;
+        font-weight: 500;
+        max-width: 50%;
+        text-align: center;
+        color:$white;
+        span {
+          font-weight: 700;
+        }
+        @include md {
+          right: 5%;
+        }
+        @include sm {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+}
+
+.project {
+  .back-to-work a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 2rem 3rem 0;
+    color: $grey;
+    transition: all 0.2s;
+    text-decoration: underline;
+    max-width: 230px;
+    svg {
+      transition: all 0.2s;
+    }
+    &:hover {
+      color: $black;
+      svg {
+        transform: translateX(-5px);
+      }
+    }
+  }
+  .contents {
+    padding: 5.5rem 3rem;
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      .show-image {
+        flex: 0 0 50%;
+        svg {
+          display: block;
+        }
+        @include md {
+          flex: 0 0 100%;
+        }
+      }
+      .texts {
+        flex: 0 0 30%;
+        p {
+          font-weight: 300;
+          line-height: 1.6;
+        }
+        a {
+          background: $purpleLt;
+          color: $white;
+          font-weight: 300;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 150px;
+          padding: 0.5rem 1rem;
+          box-shadow: 0 1em 1em -0.5em #0005;
+          margin-top: 2rem;
+          svg {
+            transition: all 0.2s;
+          }
+          &:hover svg {
+            transform: translateX(5px);
+          }
+        }
+        @include md {
+          flex: 0 0 100%;
+          margin-top: 3rem;
+        }
+      }
+    }
+    @include sm {
+      padding: 3rem 2rem;
+    }
+  }
+  .mobile-images {
+    padding: 5rem 3rem 6rem;
+    position: relative;
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .mobile-image {
+        display: block;
+        flex: 0 0 20%;
+        padding: 5rem 2rem 4rem;
+        border-radius: 4rem;
+        background: linear-gradient(135deg, #f0f0f0, #fafafa);
+        position: relative;
+        width: 100%;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 3rem;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 0.5rem;
+          width: 5rem;
+          background-color: #d7d7d7;
+          border-radius: 2rem;
+        }
+        @include md {
+          padding: 3rem 1rem 2.5rem;
+          border-radius: 2rem;
+          &::before {
+            top: 1.5rem;
+            width: 3rem;
+            height: 0.3rem;
+          }
+        }
+        @include sm {
+          flex: 0 0 100%;
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+    }
+    @include sm {
+      padding-bottom: 2rem;
+    }
+  }
+  .prev-next{
+    clear:both;
+    padding:0 3rem;
+    .prev-link,.next-link{
+      text-align: center;
+      text-shadow: 1px 3px 5px #cac9cc;
+      svg{font-size:2rem;transition:all 0.2s}
+    }
+    .prev-link{
+      float:left; 
+      &:hover{
+        svg{animation:move-left 1.2s linear infinite}
+      }    
+    }
+    .next-link{
+      float:right;
+      &:hover{
+        svg{animation:move-right 1.2s linear infinite}
+      }
+    }
+  }
+}

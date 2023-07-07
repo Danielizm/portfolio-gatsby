@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Portfolio Gatsby`,
@@ -15,8 +17,8 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "0C9ALYbAP63_x4fsB0yQSdKvd6-uZKmkSgaQ6IqsHsE",
-      "spaceId": "lly2eyffo90r"
+      "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
+      "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
     resolve: 'gatsby-plugin-manifest',
@@ -30,7 +32,34 @@ const config: GatsbyConfig = {
       "path": `${__dirname}/src/images`
     },
     __key: "images"
-  }]
+  }, `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: `Fira Sans`,
+            weights: [
+              "300",
+              "300i",
+              "400",
+              "400i",
+              "700",
+              "700i"
+            ]
+          },
+          {
+            family: `Sancreek`,
+            weights: [`400`, `700`]
+          },
+          {
+            family: `Ubuntu`,
+            weights: [`400`,`500`, `700`]
+          },
+        ],
+      },
+    },
+  ]
 };
 
 export default config;

@@ -1,0 +1,639 @@
+@import "variables";
+@import "mixin";
+@import "animations";
+*{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p,a,label,span{
+  user-select: none;
+}
+:root {
+  --s1-w: 40vmin;
+  --s2-w: 40vmin;
+  --s3-w: 10vmin;
+}
+:root,
+body {
+  overflow-x: hidden;
+  &.fixed {
+    overflow: hidden;
+    color:#0000
+  }
+}
+body {
+  font-family: $font_main;
+  font-size: 16px;
+  margin: 0;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $font_head;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p,li{
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  .container {
+    max-width: 95rem;
+    width: 100%;
+    margin: auto;
+    @include lg {
+    }
+  }
+  .card {
+    box-shadow: 1.5rem 2.5rem 4rem 0.7rem rgba(0, 0, 0, 0.25);
+    @include sm {
+      box-shadow: 1rem 1.5rem 4rem 0.3rem rgba(0, 0, 0, 0.25);
+    }
+  }
+  .btn {
+    background: $purpleLt;
+    color: $white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    position: relative;
+    svg path {
+      stroke: $white;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      top: 2px;
+    }
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  .btn-ra {
+    position: relative;
+    margin: auto;
+    padding: 16px 22px;
+    transition: all 0.2s cubic-bezier(0.42, 0, 0, 1) 0.2s;
+    span {
+      position: relative;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+    svg {
+      position: relative;
+      top: 0;
+      margin-left: 10px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: #111;
+      stroke-width: 2;
+      transform: translateX(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      border-radius: 28px;
+      background: rgba(155, 138, 169, 0.5);
+      width: 50px;
+      height: 50px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      color:$white;
+      svg {
+        transform: translateX(0);
+        stroke:$white;
+      }
+      &::before {
+        width: 100%;
+        background: $purpleLt;
+      }
+    }
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+
+  //mobile nav
+  .toggle-btn {
+    position: fixed;
+    z-index: 100;
+    height: 24px;
+    width: 40px;
+    right: 5%;
+    top: 25px;
+    display: none;
+    span {
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background: $black;
+      &.up {
+        top: 0;
+      }
+      &.mid {
+        top: 12px;
+      }
+      &.down {
+        top: 24px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &.white span {
+      background: $white !important;
+    }
+    @include md {
+      display: block;
+    }
+    @include sm {
+      top: 20px;
+    }
+  }
+  .mobile-nav {
+    position: fixed;
+    z-index: 99;
+    background: $dark;
+    height: 100%;
+    width: 100%;
+    top: -120%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    nav {
+      text-align: center;
+      a {
+        color: $white;
+        display: block;
+        text-decoration: none;
+        font-size: 4vw;
+        font-weight: 300;
+        margin: 0.3em auto;
+        letter-spacing: 5px;
+        &:hover {
+          color: #f1f1f1;
+        }
+        @include md {
+          font-size: 9vw;
+          margin: 0.8em auto;
+        }
+      }
+    }
+    @include md {
+      display: flex;
+    }
+  }
+
+  //header
+  header {
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    .inner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        a {
+          font-weight: 700;
+          text-decoration: none;
+          letter-spacing: 1.5px;
+          color: $black;
+          display: inline-block;
+          width: 70px;
+          transition: all 0.4s;
+          @include sm {
+            width: 60px;
+          }
+        }
+      }
+      .navigation {
+        nav {
+          position: relative;
+          a {
+            margin: 0 20px;
+            text-decoration: none;
+            letter-spacing: 1.75px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: $black;
+            position: relative;
+            &:after,
+            &[aria-current]:after {
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 0%;
+              content: "";
+              color: transparent;
+              background: $purpleLt;
+              height: 2px;
+              transition: all 0.3s;
+            }
+            &:hover:after,
+            &[aria-current]:after {
+              width: 100%;
+            }
+          }
+          .slide-line {
+            padding: 0;
+            margin: 0;
+            background: none #cc0000;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            border-radius: 3px;
+            width: 50px;
+            height: 3px;
+            left: 20px;
+            top: 25px;
+          }
+        }
+        @include md {
+          display: none;
+        }
+      }
+    }
+    &.sticky {
+      background: $white;
+      transition: backgroud 0.5s cubic-bezier(0.42, 0, 0, 1) 0.5s;
+      box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,.1);
+      .logo a {
+        width: 60px;
+      }
+    }
+    &:not(.sticky) {
+      .white nav a {
+        color: $white;
+        &:after,
+        &[aria-current]:after {
+          background: $white;
+        }
+      }
+    }
+  }
+
+  //banner
+  .banner {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      background-color: $blue;
+    }
+    h1 {
+      text-align: center!important;
+      /*position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);*/
+      color: $white;
+      font-size: 5rem;
+      z-index: 1;
+      width: 100%;
+      padding:0;
+      margin:0;
+      @include md {
+        font-size: 9vw;
+        /*font-size:2.5rem;*/
+      }
+    }
+    &[data-loaded="loaded"] {
+      height: 50vh;
+      transition: all 0.8s cubic-bezier(0.42, 0, 0, 1) 0.8s;
+      @include md {
+        height: 40vh;
+      }
+    }
+  }
+  //form
+  .form-section {
+    padding: 3rem 0;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      width:100%;
+      padding:0;
+      span{
+        display: block;
+        margin:auto;
+      }
+      @include sm {
+        font-size: 8vw;
+      }
+    }
+    h3 {
+      text-align: center;
+      color: $grey;
+      font-family: $font_main;
+      font-size: 1.5rem;
+      a {
+        color: $purpleLt;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .form-wrap {
+      text-align: left;
+      .success-msg{
+        text-align: center;
+        color:green;
+        font-size: 1.5rem;
+        max-width: 400px;
+        margin:auto;
+        padding:1rem 2rem;
+        border:2px solid green;
+        @include sm{
+          font-size: 5vw;
+          width:75%;
+          padding:1rem 0.5rem;
+        }
+      }
+      form {
+        max-width: 500px;
+        margin: auto;
+        label,
+        input {
+          display: block;
+        }
+        label {
+          font-size: 1.5rem;
+          font-weight: 300;
+          margin-bottom: 1rem;
+          span {
+            display: block;
+            font-size: 0.8rem;
+            color: red;
+          }
+        }
+        input,
+        textarea:not(#test),
+        button {
+          appearance: none;
+        }
+        input {
+          border: none;
+          border-bottom: 2px solid $grey;
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.3rem;
+          &.error,
+          &.error:focus {
+            border-color: red;
+          }
+        }
+        textarea:not(#test) {
+          font-size: 1rem;
+          border: 2px solid $grey;
+          resize: none;
+          width: 100%;
+          padding: 1rem;
+          height: 180px;
+          &.error,
+          &.error:focus {
+            border-color: red;
+          }
+        }
+        input,
+        textarea:not(#test) {
+          text-rendering: auto;
+          border-radius: 0;
+          &:focus {
+            border-color: $blue;
+            outline: none;
+          }
+        }
+        ::-webkit-input-placeholder {
+          /* Edge */
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        ::placeholder {
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        .forms_field {
+          padding: 1rem 0;
+          vertical-align: middle;
+          &:last-child {
+            text-align: center;
+          }
+        }
+        @include sm {
+          width: 90%;
+          margin: auto;
+          /*input,
+          textarea {
+            width: 90%;
+          }*/
+        }
+      }
+    }
+  }
+  //contact bar
+  .contact-bar {
+    background: $white;
+    clear:both;
+    .container {
+      h2 {
+        text-align: center;
+        max-width: 80rem;
+        width: 90%;
+        position: relative;
+        margin: auto;
+        padding: 4rem 0;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $purpleLt;
+          position: absolute;
+          top: 75%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        a {
+          position: relative;
+          color: $purpleLt;
+          padding: 0.4em 0.8em;
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 20%;
+            height: 20%;
+            border: 2px solid;
+            transition: all 0.6s ease;
+            border-radius: 2px;
+          }
+          &::before {
+            top: 0;
+            left: 0;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-top-color: $purpleLt;
+            border-left-color: $purpleLt;
+          }
+          &::after {
+            bottom: 0;
+            right: 0;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: $purpleLt;
+            border-right-color: $purpleLt;
+          }
+          &:hover::before,
+          &:hover::after {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        @include sm{
+          line-height: 1.6;
+          padding-top:2rem;
+        }
+      }
+    }
+  }
+  //footer
+  footer {
+    .footer-banner {
+      background: $black;
+      padding: 2rem 0;
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .lang-icon {
+          font-size: 3rem;
+          color: $white;
+          flex: 0 0 20%;
+          text-align: center;
+          &.lg {
+            font-size: 3.5rem;
+          }
+        }
+      }
+      @include sm {
+        padding: 1rem 0;
+      }
+    }
+    .copyright {
+      padding: 20px 3rem;
+      .container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        & > *{width:auto;}
+        a{
+          &:hover{opacity:0.7}
+          svg{vertical-align: middle;font-size: 2rem;}
+        }
+      }
+      @include xs{
+        padding: 20px 1rem;
+      }
+    }
+    .footer-bg{
+      height:5rem;
+    }
+  }
+  .not-found{
+    height:calc(100vh - 194px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrap{
+      text-align: center;
+      h1{font-size: 10rem;color:$maroon;margin:0;text-shadow: -5px 13px 8px #cac9cc, 0 -2px 1px;line-height: 1;}
+      p{font-size:1.5rem;}
+      @include sm{
+        h1{font-size: 8rem;}
+        p{font-size: 1rem;}
+      }
+    }
+  }
+  .divider {
+    border-bottom: 1px solid $grey;
+    background-color: $grey;
+    height: 1px;
+    margin: 0.5em 0px 1.5em;
+    span {
+      display: block;
+      width: 20%;
+      height: 2px;
+      background-color: $purpleLt;
+    }
+  }
+  .scroll-up{
+    position: fixed;
+    padding:0.6rem;
+    font-size:1.7rem;
+    bottom:10%;
+    right:0;
+    background:$purpleLt;
+    color:$white;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+    animation:slideLeft .8s alternate;
+    transition: all .8s;
+    cursor:pointer;
+    opacity:0.7;
+    border-radius: 10%;
+    &:hover{
+      opacity:1;
+    }
+  }
+  @import "home";
+  @import "about";
+  @import "portfolio";
+}

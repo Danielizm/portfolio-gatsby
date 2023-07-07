@@ -1,12 +1,12 @@
 import React from 'react'
 import { DiJavascript } from "react-icons/di";
 import {FaReact,FaPhp,FaWordpress,FaNode,FaLinkedin} from 'react-icons/fa'
-import {GatsbyImage} from "gatsby-plugin-image"
+import {StaticImage} from "gatsby-plugin-image"
 import {useStaticQuery, graphql} from 'gatsby'
 
 
 const footer = () => {
-    const data = useStaticQuery(graphql`
+    /*const data = useStaticQuery(graphql`
     query {
         footer_bg:file(relativePath:{eq:"footer-bg-cut.jpg"}){
             childImageSharp{
@@ -16,7 +16,7 @@ const footer = () => {
             }
         }
     }
-    `)
+    `)*/
     return (
         <footer>
             <div className="footer-banner">
@@ -35,9 +35,11 @@ const footer = () => {
                 </div>
                 
             </div>
-            <GatsbyImage
-              image={data.footer_bg.childImageSharp.fluid}
+            <StaticImage
+              src="../images/footer-bg-cut.jpg"
               alt="Footer Image"
+              placeholder="blurred"
+              layout="fullWidth"
               className="footer-bg"
             />
         </footer>

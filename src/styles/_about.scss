@@ -1,0 +1,326 @@
+.about-me {
+  padding: 5rem 3rem;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    .am-image {
+      flex: 0 0 30%;
+      .gatsby-image-wrapper {
+        max-width: 350px;
+        margin: auto;
+      }
+    }
+    .am-texts {
+      flex: 0 0 40%;
+    }
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $white;
+    z-index: 2;
+  }
+  @include md {
+    .container {
+      .am-image,
+      .am-texts {
+        flex: 0 0 100%;
+      }
+    }
+  }
+  @include sm {
+    padding: 3rem 1.8rem;
+  }
+}
+.education {
+  background: $greyLt;
+  padding: 5rem 3rem;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    .edu-image {
+      flex: 0 0 30%;
+      .gatsby-image-wrapper {
+        max-width: 350px;
+        margin: auto;
+      }
+    }
+    .edu-texts {
+      flex: 0 0 40%;
+    }
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $greyLt;
+  }
+  @include md {
+    .container {
+      .edu-image,
+      .edu-texts {
+        flex: 0 0 100%;
+      }
+      .edu-image {
+        margin-top: 2rem;
+        order: 1;
+      }
+      .edu-texts {
+        order: 2;
+      }
+    }
+  }
+  @include sm {
+    padding: 3rem 1.8rem;
+  }
+}
+
+.skills {
+  padding: 5rem 3rem;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    .skill-texts {
+      flex: 0 0 35%;
+    }
+    .chart {
+      flex: 0 0 50%;
+      .bar {
+        position: relative;
+        background: $greyLt;
+        color: $grey;
+        height: 30px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.13);
+        .tag {
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: $purpleLt;
+          color: $white;
+          height: 100%;
+          width: 9rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          @include sm {
+            width: 7rem;
+          }
+        }
+        &.fill {
+          background: $purpleLL;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          padding: 0;
+          transition: 1.2s 0.2s width ease-in-out;
+        }
+        span {
+          font-size: 1rem;
+          margin-right: 1rem;
+          position: absolute;
+          top: 50%;
+          right: 0.4rem;
+          transform: translateY(-50%);
+          @include sm {
+            right: 0;
+          }
+        }
+        &.wrap {
+          transition: all 0.6s;
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
+    }
+    @include md {
+      & > div {
+        flex: 0 0 100% !important;
+      }
+      .chart {
+        margin-top: 2rem;
+      }
+    }
+  }
+  @include sm {
+    padding: 3rem 1.8rem;
+  }
+}
+
+.icons-badge {
+  padding: 5rem 3rem;
+  background: $purpleLt;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .icon-wrap {
+      flex: 0 0 20%;
+      color: $white;
+      text-align: center;
+      .icon {        
+        padding: 1rem;
+        background: $white;
+        position: relative;
+        display: inline-block;
+        width:auto;
+        svg{
+          font-size: 3rem;
+          position: relative;
+          z-index: 2;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding:2.5rem;
+          background: $white;
+        }
+        &::before{
+          transform: rotate(30deg);
+        }
+        &::after{
+          transform: rotate(60deg);
+        }
+      }
+      p{max-width: 250px;margin:auto;}
+      @include md {
+        flex: 0 0 45%;
+        &:nth-child(1),&:nth-child(2){
+          margin-bottom: 3rem;
+        }
+        p{font-size: 3.5vw;}
+      }
+    }
+  }
+  @include sm {
+    padding: 3rem 1.8rem;
+  }
+}
+
+.react-intro,.sum-intro{
+  padding:5rem 3rem;
+  .container{
+    .content{
+      max-width:900px;
+      margin:auto;
+      .intro-img{
+        max-width: 350px;
+        width:100%;
+        float:right;
+        margin: 0 0 1rem 1rem;
+        box-shadow: 0 1.25em 1em -0.5em #0005;
+      }
+    }
+  }
+  &::before,&::after{
+    opacity:0.4!important;
+  }
+  .tag-open,.tag-close{
+    font-size:5rem;
+    color:#cecece;
+    opacity:0.7;
+    position: absolute;
+  }
+  .tag-open{
+    top:5%;
+    left:10%;
+    @include md{
+      top:0;
+      left:5%;
+    }
+  }
+  .tag-close{
+    bottom:5%;
+    right:10%;
+    display: flex;
+    align-items: center;
+    span{font-size: 3rem;}
+    @include md{
+      bottom:0;
+      right:5%;
+    }
+  }
+  @include sm{
+    padding:3rem 1.8rem;
+  }
+}
+.sum-intro{
+  &::before,&::after{
+    opacity:0.9!important;
+  }
+}
+
+.wp-intro{
+  padding:5rem 3rem;
+  position: relative;
+  .container{
+    .content{
+      max-width:900px;
+      margin:auto;
+      .intro-img{
+        max-width: 350px;
+        width:100%;
+        float:left;
+        margin: 0 1.5rem 1rem 0;
+        box-shadow: 0 1.25em 1em -0.5em #0005;
+      }
+      ul{
+        clear: both;
+      }
+    }
+  }
+  &::before,&::after{
+    position: absolute;
+    font-size:3rem;
+    color:#cecece;
+  }
+  &::before{
+    content:'\007B';
+    top:5%;
+    left:10%;
+    @include md{
+      top:0;
+      left:5%;
+    }
+  }
+  &::after{
+    content:'\007D';
+    bottom:5%;
+    right:10%;
+    @include md{
+      bottom:0;
+      right:5%;
+    }
+  }
+  @include sm{
+    padding:3rem 1.8rem;
+  }
+}
