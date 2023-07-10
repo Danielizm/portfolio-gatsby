@@ -12,17 +12,13 @@ const aboutBlurb = () => {
         <div className="inner-blurb">
           <div className="content card" data-sal="slide-up" data-sal-duration="1500">
             <h3>The ability to create</h3>
-            <h4>Web Development</h4>
+            <h4>My Approach</h4>
             <p>
-              I use HTML, CSS/SASS, and JavaScript library like React to produce responsive websites and
-              web apps that provide users the best and most appropriate
-              experience suited to their device and browser.
+            I believe in clean, efficient code and user-centered design. Every project I undertake is an opportunity to push boundaries, learn something new, and create solutions that make a real impact. Whether it's a personal blog, an e-commerce platform, or a complex web application, I approach each project with enthusiasm, creativity, and a commitment to excellence.
             </p>
-            <h4>WordPress Development</h4>
+            <h4>Let's Connect</h4>
             <p>
-              My focus when using WordPress is on ease of use and
-              maintainability; making sure you can manage your content as simply
-              and quickly as possible.
+            I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a dedicated web developer who can turn your vision into reality, let's connect! Feel free to explore my portfolio and reach out to discuss how we can work together to bring your ideas to life on the web.
             </p>
             <div className="btn-row">
               <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/about">

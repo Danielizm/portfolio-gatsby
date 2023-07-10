@@ -33,7 +33,7 @@ const aboutMe = () => {
             Fan of tennis, outdoor activities, movies.
           </p>
           <p>
-            Interested in the entire frontend spectrum and working on ambitious
+            Interested in the entire spectrum of web development and working on ambitious
             projects with positive people. The main area of my expertise is
             front end development. HTML5, CSS3, JS (TypeScript), building web
             pages and web apps with React, custom plugins, features, animations,

@@ -39,7 +39,7 @@ const reactIntro = () => {
           <GatsbyImage image={getImage(data.ra)}/>
           </div>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='400'>
-            I use HTML, CSS, and JavaScript to produce responsive websites and
+            I build responsive websites and
             web apps that provide users the best and most appropriate experience
             suited to their device and browser.
           </p>
@@ -49,7 +49,7 @@ const reactIntro = () => {
             and performant.
           </p>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='600'>
-            Building a future-proof and easy-to-maintain website is achieved by
+            Building future-proof and easy-to-maintain websites and web apps is achieved by
             breaking down a web page into its smallest pieces, often called
             components, and building them in a way that exists outside the
             context of the design they first appear in. This allows for
@@ -58,7 +58,7 @@ const reactIntro = () => {
             understand and test. Wherever possible, I find it valuable to create
             a style guide (using Storybook for example) that acts as a document
             for a reusable and maintainable code base. All involved in a project
-            can rely on a style guide to understand a project’s language and
+            can rely on a style guide to understand a project's language and
             produce a more consistent user experience. Re-usable components make
             for a website that can quickly grow as does your business.
           </p>

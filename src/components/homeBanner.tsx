@@ -31,19 +31,18 @@ const banner = () => {
           <div className="main-text">
             <p>
               Welcome to my portfolio!
-              <br />I am a web developer with experiences of both frontend and
-              backend, focusing on constructing and developing websites with
+              <br />I am a passionate and versatile web developer with experiences of both frontend and
+              backend, focusing on constructing and developing websites and web apps by using technologies like 
               <span className="rw-words rw-words-1">
                 <span>HTML5</span>
-                <span>CSS3/SASS</span>
-                <span>Jquery</span>
+                <span>CSS/SASS</span>
+                <span>Javascript</span>
                 <span>ReactJS</span>
                 <span>Node.js</span>
+                <span>Git</span>
                 <span>PHP</span>
-                <span>Wordpress</span>
+                <span>CMS</span>
               </span>
-              <br />
-              and different frameworks and libraries.
             </p>
             <h1>
               {"Daniel".split('').map((letter:string,index:number)=>(

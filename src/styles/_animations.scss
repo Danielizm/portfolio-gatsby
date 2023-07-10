@@ -69,46 +69,22 @@
   animation: rotateWord 14s linear infinite 0s;
 }
 
-.rw-words span:nth-child(2) {
-  -webkit-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  animation-delay: 2s;
-  color: #6b889d;
-}
+$span_colors:(
+  "2":#6b889d,
+  "3": #6b739d,
+  "4": #7a6b9d,
+  "5": #8d6b9d,
+  "6": #9b6b9d,
+  "7": #C99
+);
 
-.rw-words span:nth-child(3) {
-  -webkit-animation-delay: 4s;
-  -ms-animation-delay: 4s;
-  animation-delay: 4s;
-  color: #6b739d;
-}
-
-.rw-words span:nth-child(4) {
-  -webkit-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s;
-  color: #7a6b9d;
-}
-
-.rw-words span:nth-child(5) {
-  -webkit-animation-delay: 8s;
-  -ms-animation-delay: 8s;
-  animation-delay: 8s;
-  color: #8d6b9d;
-}
-
-.rw-words span:nth-child(6) {
-  -webkit-animation-delay: 10s;
-  -ms-animation-delay: 10s;
-  animation-delay: 10s;
-  color: #9b6b9d;
-}
-
-.rw-words span:nth-child(7) {
-  -webkit-animation-delay: 12s;
-  -ms-animation-delay: 12s;
-  animation-delay: 12s;
-  color: #C99;
+@for $i from 1 through 8{
+  .rw-words span:nth-child(#{$i + 1}){
+    -webkit-animation-delay: #{$i* 2}s;
+    -ms-animation-delay: #{$i* 2}s;
+    animation-delay: #{$i* 2}s;
+    color: map-get($span_colors,#{$i+1});
+  }
 }
 
 @keyframes rotateWord {

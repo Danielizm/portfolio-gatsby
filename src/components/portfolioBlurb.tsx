@@ -28,9 +28,9 @@ const portfolioBlurb = () => {
             <h2 className="blurb-head">
               My values:
               <br />
-              Creativity
+              Innovation
               <br />
-              Flexibility
+              Collaboration
               <br />
               Adaptability
             </h2>

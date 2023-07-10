@@ -68,7 +68,7 @@ const skills = () => {
           </p>
           <p data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
             Other skills include but not limit to: Sass, Bootstrap,
-            Styled-components, Jquery, GIT, Webpack, Unit test with Jest, GraphQL.
+            Styled-components, Tailwind, GIT version control, Webpack, Unit test, GraphQL.
           </p>
         </div>
         <div className="chart">
@@ -81,7 +81,7 @@ const skills = () => {
               >
                 <div className="tag">{skill[0]}</div>
               </div>
-              <span>{skill[1]}</span>
+              {/*<span>{skill[1]}</span>*/}
             </div>
           ))}
         </div>

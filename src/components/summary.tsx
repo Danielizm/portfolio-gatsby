@@ -32,7 +32,7 @@ const summary = () => {
       <div className="container">
         <div className="content">
           <h2 data-sal="slide-up" data-sal-duration='1000'>
-          Philosophy
+          My Approach
           </h2>
           <div
             className="divider"
