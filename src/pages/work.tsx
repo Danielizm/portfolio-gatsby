@@ -38,7 +38,7 @@ const works = () => {
     <Layout isHome={false}>
       <SEO title="Work"/>
       <Banner
-        header="Related Projects"
+        header="Projects"
         img={data.banner}
         alt="work hero image"
       />
@@ -61,7 +61,6 @@ const works = () => {
           </div>
           </div>
           <div className="intro-texts">
-          <p>Succeed online with a website that is fast, easy to use, and built with best practices.</p>
           <p>My web developer portfolio highlights just some of the website projects I’ve participated. I have worked on many web programming projects over the years, ranging from full website development to small programming jobs.</p>
           <p>Since web technologies are developing fast,different web projects with different requirements should be handled with verious techniques.</p>
           </div>

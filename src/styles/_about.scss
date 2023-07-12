@@ -16,6 +16,9 @@
     .am-texts {
       flex: 0 0 40%;
     }
+    &.plain-text{
+      margin-top:40px;
+    }
   }
   &::after {
     content: "";

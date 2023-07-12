@@ -65,8 +65,7 @@ const reactIntro = () => {
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='600'>
             I am experienced in building systems that implement business
             logic and interact with server-side technology via APIs and tools
-            such as React and Redux, as well as testing code using tools such as
-            Jasmine.
+            such as React and Redux, as well as testing code using tools.
           </p>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='600'>
             I have a special interest in use of animation on the web. I
