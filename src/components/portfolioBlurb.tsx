@@ -12,13 +12,13 @@ const portfolioBlurb = () => {
           <div className="wrap-item" id="item-1" data-sal="slide-up" data-sal-duration="800">
           <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/alloc8recruitment">
               <figure className="effect-ming card">
-                <StaticImage src="../images/projects_thumb/alloc8-1.png" alt="" placeholder="blurred" />
+                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Alloc8 <span>Recruitment</span>
+                  Employsure
                   </h2>
                   <p>
-                  alloc8 recruitment is a recruitment agency based in Sydney offering jobs in data science, data engineering, data warehouse, and data analytics.
+                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
                   </p>
                 </figcaption>
               </figure>
@@ -36,13 +36,11 @@ const portfolioBlurb = () => {
             </h2>
             <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/coastbeat">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/coastbeat-1.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/ranbuild_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
-                  <h2>Coastbeat</h2>
+                  <h2>Ranbuild</h2>
                   <p>
-                    'Coastbeat' is a one hundred page plus magazine that
-                    highlights the best and sometimes hidden gems of the NSW
-                    North Coast.
+                  Ranbuild is an Australian company that specializes in steel buildings.
                   </p>
                 </figcaption>
               </figure>
@@ -51,13 +49,13 @@ const portfolioBlurb = () => {
           <div className="wrap-item" id="item-3" data-sal="slide-up" data-sal-duration="800">
           <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/lanolips">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/lanolips-1.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/aspengroup_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Lanolips
+                  Aspen Group
                   </h2>
                   <p>
-                  Lanolips is a 100% natural and awesome remedy for dry skin and lips, an awarded fun and travel-sized solution for your daily skincare
+                  Discover Aspen Group, an ASX-listed leader in affordable, quality accommodation across Australia.
                   </p>
                 </figcaption>
               </figure>
@@ -75,13 +73,13 @@ const portfolioBlurb = () => {
           <div className="wrap-item" id="item-4" data-sal="slide-up" data-sal-duration="800">
           <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/northcape">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/northcape-1.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/amnesty-1.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Northcape
+                  Amnesty
                   </h2>
                   <p>
-                  Investment Specialists in Australian & International Equities. Northcape Capital has a proud record of achieving a strong outperformance
+                  Amnesty International Australia searches out facts about human rights abuses and raises awareness of these abuses in Australia, the Asia-Pacific and around the world.
                   </p>
                 </figcaption>
               </figure>
