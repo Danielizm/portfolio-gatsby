@@ -49,13 +49,13 @@ const portfolioBlurb = () => {
             </AniLink>
           </div>
           <div className="wrap-item" id="item-3" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/ranbuild">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/raggc">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/ranbuild_feature.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/raggc_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
-                  <h2>Ranbuild</h2>
+                  <h2>RAGGC</h2>
                   <p>
-                  Ranbuild is an Australian company that specializes in steel buildings.
+                  The premier golf club and golfing facility within the Auckland region, New Zealand.
                   </p>
                 </figcaption>
               </figure>
