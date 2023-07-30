@@ -68,7 +68,7 @@ const skills = () => {
           </p>
           <p data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
             Other skills include but not limit to: Sass, Bootstrap,
-            Styled-components, Tailwind, GIT version control, Webpack, Unit test, GraphQL.
+            Styled-components, Tailwind, GIT version control, Webpack, Unit test, GraphQL, AWS services.
           </p>
         </div>
         <div className="chart">

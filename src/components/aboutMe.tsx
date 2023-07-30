@@ -59,7 +59,7 @@ const aboutMe = () => {
           </p>
           <h4>CMS Expertise</h4>
           <p>
-          As a skilled WordPress developer, I can build and customize content management systems that empower clients to manage their websites with ease.
+          As a skilled CMS developer, I can build and customize content management systems that empower clients to manage their websites with ease.
           </p>
           <h4>Full-Stack Integration</h4>
           <p>
