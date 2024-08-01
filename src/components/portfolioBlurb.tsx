@@ -34,15 +34,15 @@ const portfolioBlurb = () => {
               <br />
               Adaptability
             </h2>
-            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/employsure">
+            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/swiftdoc">
               <figure className="effect-ming card">
-                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
+                <StaticImage src="../images/projects_thumb/swiftdoc_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Employsure
+                  SwiftDoc
                   </h2>
                   <p>
-                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
+                  SwiftDoc Online Booking Platform
                   </p>
                 </figcaption>
               </figure>
