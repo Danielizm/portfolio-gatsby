@@ -240,6 +240,18 @@
           }
           &:hover img{object-position: bottom;}
         }
+        &::before{
+          content: '';
+          background: url(../images/Hover_to_scroll.png) no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 188px;
+          height: 83px;
+          position: absolute;
+          top: -90px;
+          left: 50px;
+          @include md {display: none;}
+        }
       }
       .texts {
         flex: 0 0 40%;
