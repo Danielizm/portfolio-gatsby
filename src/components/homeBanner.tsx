@@ -70,7 +70,7 @@ const banner = () => {
           </div>
         </div>
       </div>
-      <div className="fixed-misc">Web Development</div>
+      <div className="fixed-misc">Full Stack Development</div>
     </div>
   )
 }
