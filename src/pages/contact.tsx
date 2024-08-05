@@ -26,7 +26,6 @@ const contact = () => {
             <Banner header="Contact" img={data.banner} alt="Contact hero image"/>
             <div className="container form-section">
             <h2>Send me a message</h2>
-            <h3>Or email me on <a href="mailto:jiacheng_su@hotmail.com">jiacheng_su@hotmail.com</a></h3>
             <Form />
             </div>
         </Layout>
