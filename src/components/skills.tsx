@@ -6,12 +6,12 @@ const skills = () => {
   const skills: Array<any> = [
     ["HTML", "90%"],
     ["CSS", "90%"],
-    ["JAVASCRIPT", "85%"],
-    ["REACT", "85%"],
+    ["JAVASCRIPT", "87%"],
+    ["REACT", "87%"],
     ["REDUX", "80%"],
-    ["NODE.JS", "75%"],
-    ["PHP", "75%"],
-    ["WORDPRESS", "85%"],
+    ["NODE.JS", "78%"],
+    ["PHP", "78%"],
+    ["CMS", "86%"],
   ]
 
   useEffect(() => {

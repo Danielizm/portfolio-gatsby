@@ -31,7 +31,7 @@ const reactIntro = () => {
       <div className="tag-open">&lt;</div>
       <div className="container">
         <div className="content">
-          <h2 data-sal="slide-up" data-sal-duration='1200'>Web developer</h2>
+          <h2 data-sal="slide-up" data-sal-duration='1200'>Web development</h2>
           <div className="divider" data-sal="slide-up" data-sal-duration='1000' data-sal-delay='200'>
             <span></span>
           </div>
