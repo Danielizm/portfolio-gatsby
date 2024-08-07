@@ -19,7 +19,7 @@ const wpIntro = () => {
       <div className="container">
         <div className="content">
           <h2 data-sal="slide-up" data-sal-duration='1000'>
-            CMS developer
+            CMS development
           </h2>
           <div
             className="divider"
