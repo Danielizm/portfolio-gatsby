@@ -31,7 +31,7 @@ const banner = () => {
           <div className="main-text">
             <p>
               Welcome to my portfolio!
-              <br />I am a passionate and versatile full stack developer with experiences of both frontend and
+              <br />I am a passionate and versatile full stack web engineer with experiences of both frontend and
               backend, focusing on constructing and developing websites and web apps by using technologies like 
               <span className="rw-words rw-words-1">
                 <span>HTML5</span>

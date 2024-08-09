@@ -38,7 +38,7 @@ const wpIntro = () => {
             <GatsbyImage image={getImage(data.wp)} alt="wordpress-developer"/>
           </div>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='600'>
-          CMS development with WordPress and other headless CMS options, such as Strapi or Contentful, has become a critical aspect of modern web development, particularly for developers working with React. WordPress, one of the most popular and versatile CMS platforms, can be used in a traditional full-stack setup or as a headless CMS where it solely manages content, delivering it via APIs like REST or GraphQL.
+          CMS development with WordPress and other headless CMS options, such as Contentful, has become a critical aspect of modern web development, particularly for developers working with React. WordPress, one of the most popular and versatile CMS platforms, can be used in a traditional full-stack setup or as a headless CMS where it solely manages content, delivering it via APIs like REST or GraphQL.
           </p>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='800'>
           Headless CMS architecture decouples the backend from the frontend, offering developers greater flexibility and control over the user experience. With React, developers can leverage this approach to build highly dynamic, scalable, and responsive web applications, integrating content from the CMS seamlessly. This method also allows for the integration of modern JavaScript frameworks and libraries, such as Next.js, enabling fast, server-side rendering and rich client-side interactivity.

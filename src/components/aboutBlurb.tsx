@@ -18,7 +18,7 @@ const aboutBlurb = () => {
             </p>
             <h4>Let's Connect</h4>
             <p>
-            I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a dedicated web developer who can turn your vision into reality, let's connect! Feel free to explore my portfolio and reach out to discuss how we can work together to bring your ideas to life on the web.
+            I'm always excited to take on new challenges and collaborate on innovative projects. If you're looking for a dedicated web engineer who can turn your vision into reality, let's connect! Feel free to explore my portfolio and reach out to discuss how we can work together to bring your ideas to life on the web.
             </p>
             <div className="btn-row">
               <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/about">

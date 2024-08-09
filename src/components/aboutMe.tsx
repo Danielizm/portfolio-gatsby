@@ -39,7 +39,7 @@ const aboutMe = () => {
             and coding interactive layouts.
           </p>
           <p>
-            I have also full-stack developer experience with Node.js related projects.
+            I have also full-stack web engineer experience with Node.js related projects.
           </p>
         </div>
       </div>
