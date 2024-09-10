@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const wpIntro = () => {
   const data = useStaticQuery(graphql`
     query {
-      wp: file(relativePath: { eq: "wordpress-developer.jpg" }) {
+      wp: file(relativePath: { eq: "cms-cover.webp" }) {
         childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
