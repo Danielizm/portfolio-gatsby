@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
+import {StaticImage, GatsbyImage, getImage} from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import Layout from "../components/layout"
@@ -52,8 +52,8 @@ const project = ({ data, pageContext }: any) => {
       </div>
       <div className="contents">
         <div className="container">
-          <div className="show-image card">
-            <svg
+          <div className="show-image">
+            {/*<svg
               className=""
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 801 23"
@@ -83,8 +83,14 @@ const project = ({ data, pageContext }: any) => {
                 cy="11.5"
                 r="4.7"
               ></circle>
-            </svg>
-            <GatsbyImage image={getImage(project.show_image)} />
+            </svg>*/}
+            <StaticImage
+              src="../images/laptop-mockup-bg.png"
+              alt="laptop"
+              placeholder="blurred"
+              className="laptop-img"
+            />
+            <GatsbyImage image={getImage(project.show_image)} className="image-wrap"/>
           </div>
           <div className="texts">
             <div className="description">
