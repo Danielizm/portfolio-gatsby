@@ -27,7 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
     
     const getProjects = makeRequest(graphql, `
       {
-        allContentfulProjects(sort: { fields: id, order: ASC }) {
+        allContentfulProjects(sort: { project_id:ASC }) {
           edges {
             node {
               id
