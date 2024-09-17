@@ -38,32 +38,14 @@ const wpIntro = () => {
             <GatsbyImage image={getImage(data.wp)} alt="wordpress-developer"/>
           </div>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='600'>
-            In many projects, clients require the ability to manage the content
-            of their website. WordPress is the world’s most popular content
-            management system which I have years of experience with. My focus
-            when using WordPress is on ease of use and maintainability; making
-            sure client can manage the content as simply and quickly as
-            possible.
+          CMS development with WordPress and other headless CMS options, such as Strapi or Contentful, has become a critical aspect of modern web development, particularly for developers working with React. WordPress, one of the most popular and versatile CMS platforms, can be used in a traditional full-stack setup or as a headless CMS where it solely manages content, delivering it via APIs like REST or GraphQL.
           </p>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='800'>
-            I have a thorough understanding of each part of the platform, as
-            well as the verious programming languages used to run it
+          Headless CMS architecture decouples the backend from the frontend, offering developers greater flexibility and control over the user experience. With React, developers can leverage this approach to build highly dynamic, scalable, and responsive web applications, integrating content from the CMS seamlessly. This method also allows for the integration of modern JavaScript frameworks and libraries, such as Next.js, enabling fast, server-side rendering and rich client-side interactivity.
           </p>
           <p data-sal="slide-up" data-sal-duration='1000' data-sal-delay='1000'>
-            Typically, WordPress development perform the following tasks:</p>
-            <ul data-sal="slide-up" data-sal-duration='1000' data-sal-delay='1000'>
-              <li>Creating and customizing plugins and themes.</li>
-              <li>
-                Developing code and troubleshooting for WordPress core (that is,
-                the actual software of WordPress).
-              </li>
-              <li>
-                Working closely with clients to help design and build their
-                WordPress websites.
-              </li>
-              <li>Ensuing that client websites are maintained efficiently.</li>
-              <li>Improving the accessibility of the WordPress platform.</li>
-            </ul>
+          Ultimately, headless CMS solutions, combined with the power of React, allow developers to create more flexible, performant, and scalable web applications.
+          </p>
         </div>
       </div>
     </div>

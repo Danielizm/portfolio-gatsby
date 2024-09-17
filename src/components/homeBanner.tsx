@@ -39,9 +39,8 @@ const banner = () => {
                 <span>Javascript</span>
                 <span>ReactJS</span>
                 <span>Node.js</span>
-                <span>Git</span>
                 <span>PHP</span>
-                <span>CMS</span>
+                <span>Git</span>
               </span>
             </p>
             <h1>
