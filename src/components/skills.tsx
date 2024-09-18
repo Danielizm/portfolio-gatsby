@@ -6,11 +6,11 @@ const skills = () => {
   const skills: Array<any> = [
     ["HTML", "90%"],
     ["CSS", "90%"],
-    ["JAVASCRIPT", "80%"],
-    ["REACT", "80%"],
-    ["REDUX", "75%"],
-    ["NODE.JS", "70%"],
-    ["PHP", "70%"],
+    ["JAVASCRIPT", "85%"],
+    ["REACT", "85%"],
+    ["REDUX", "80%"],
+    ["NODE.JS", "75%"],
+    ["PHP", "75%"],
     ["WORDPRESS", "85%"],
   ]
 
