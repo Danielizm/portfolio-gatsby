@@ -34,28 +34,28 @@ const portfolioBlurb = () => {
               <br />
               Adaptability
             </h2>
-            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/ranbuild">
+            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/employsure">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/ranbuild_feature.png" alt="" placeholder="blurred" />
+                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
-                  <h2>Ranbuild</h2>
+                  <h2>
+                  Employsure
+                  </h2>
                   <p>
-                  Ranbuild is an Australian company that specializes in steel buildings.
+                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
                   </p>
                 </figcaption>
               </figure>
             </AniLink>
           </div>
           <div className="wrap-item" id="item-3" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/aspengroup">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/ranbuild">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/aspengroup_feature.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/ranbuild_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
-                  <h2>
-                  Aspen Group
-                  </h2>
+                  <h2>Ranbuild</h2>
                   <p>
-                  Discover Aspen Group, an ASX-listed leader in affordable, quality accommodation across Australia.
+                  Ranbuild is an Australian company that specializes in steel buildings.
                   </p>
                 </figcaption>
               </figure>
@@ -71,15 +71,15 @@ const portfolioBlurb = () => {
             </div>
           </div>
           <div className="wrap-item" id="item-4" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/employsure">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/aspengroup">
               <figure className="effect-ming card">
-                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
+              <StaticImage src="../images/projects_thumb/aspengroup_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Employsure
+                  Aspen Group
                   </h2>
                   <p>
-                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
+                  Discover Aspen Group, an ASX-listed leader in affordable, quality accommodation across Australia.
                   </p>
                 </figcaption>
               </figure>
