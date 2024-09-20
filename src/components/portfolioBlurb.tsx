@@ -10,15 +10,15 @@ const portfolioBlurb = () => {
       <div className="container">
         <div className="wrap">
           <div className="wrap-item" id="item-1" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/alloc8recruitment">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/loanbase">
               <figure className="effect-ming card">
-                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
+                <StaticImage src="../images/projects_thumb/loanbase-feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Employsure
+                  Loan Base
                   </h2>
                   <p>
-                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
+                  Loan Base is a mortgage broking practice, privately owned and operated in Australia.
                   </p>
                 </figcaption>
               </figure>
@@ -34,7 +34,7 @@ const portfolioBlurb = () => {
               <br />
               Adaptability
             </h2>
-            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/coastbeat">
+            <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/ranbuild">
               <figure className="effect-ming card">
               <StaticImage src="../images/projects_thumb/ranbuild_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
@@ -47,7 +47,7 @@ const portfolioBlurb = () => {
             </AniLink>
           </div>
           <div className="wrap-item" id="item-3" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/lanolips">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/aspengroup">
               <figure className="effect-ming card">
               <StaticImage src="../images/projects_thumb/aspengroup_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
@@ -71,15 +71,15 @@ const portfolioBlurb = () => {
             </div>
           </div>
           <div className="wrap-item" id="item-4" data-sal="slide-up" data-sal-duration="800">
-          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/northcape">
+          <AniLink paintDrip direction="up" hex="#beb2c7" duration={0.7} to="/work/employsure">
               <figure className="effect-ming card">
-              <StaticImage src="../images/projects_thumb/amnesty-1.png" alt="" placeholder="blurred" />
+                <StaticImage src="../images/projects_thumb/employsure_feature.png" alt="" placeholder="blurred" />
                 <figcaption>
                   <h2>
-                  Amnesty
+                  Employsure
                   </h2>
                   <p>
-                  Amnesty International Australia searches out facts about human rights abuses and raises awareness of these abuses in Australia, the Asia-Pacific and around the world.
+                  Employsure is Australia's largest advice firm for small businesses on employee management and WHS.
                   </p>
                 </figcaption>
               </figure>
