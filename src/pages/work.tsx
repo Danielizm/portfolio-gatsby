@@ -21,6 +21,7 @@ const works = () => {
         edges {
           node {
             id
+            project_id
             title
             blurb{blurb}
             detail{raw}
