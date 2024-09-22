@@ -17,7 +17,7 @@ const works = () => {
           )
         }
       }
-      allContentfulProjects(sort: { fields: id, order: ASC }) {
+      allContentfulProjects(sort: {project_id:DESC}) {
         edges {
           node {
             id

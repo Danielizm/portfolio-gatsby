@@ -5,7 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 interface gridItemProps {
   project: any
-  key: string
+  key: number
 }
 
 const gridItem = (props: gridItemProps) => {
